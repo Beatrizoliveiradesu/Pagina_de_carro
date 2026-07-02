@@ -4,7 +4,7 @@ const produto = [
         marca: 'Ferrari', 
         categoria: 'Superesportivo', 
         preco: 3900000, 
-        imagem: '../assets/ferrarif8.jpg', 
+        imagem: 'assets/ferrarif8.jpg', 
         descricao: 'A Ferrari F8 Spider é um conversível de alto desempenho que combina o design aerodinâmico de Maranello com a emoção de dirigir com o teto aberto. Equipada com um motor V8 biturbo de 720 cavalos'
     },
     {
@@ -12,7 +12,7 @@ const produto = [
         marca: 'Lamborghini', 
         categoria: 'Superesportivo', 
         preco: 8000000, 
-        imagem: '../assets/AventadorSVJ.jpg',
+        imagem: 'assets/AventadorSVJ.jpg',
         descricao: 'A Lamborghini Aventador SVJ é um dos superesportivos mais extremos já fabricados. Equipada com um motor 6.5 V12 aspirado de 770 cv, atinge os 100 km/h em 2,8 segundos.'
     },
     {
@@ -20,7 +20,7 @@ const produto = [
         marca: 'Bentley', 
         categoria: 'Luxo', 
         preco: 2500000, 
-        imagem: '../assets/Bentley.jpg',
+        imagem: 'assets/Bentley.jpg',
         descricao: 'O Bentley Continental GT é um cupê de luxo de altíssimo desempenho, famoso por unir acabamento artesanal e motores potentes. A geração mais recente possui um sistema híbrido com motor 4.0 V8 biturbo.'
     },
     {
@@ -28,7 +28,7 @@ const produto = [
         marca: 'BMW', 
         categoria: 'Esportivo', 
         preco: 895000, 
-        imagem: '../assets/bmwM3.jpg',
+        imagem: 'assets/bmwM3.jpg',
         descricao: 'O BMW M3 Competition é um super sedã de luxo que alia a praticidade familiar à pura adrenalina das pistas. Equipado com um motor 3.0 litros de 6 cilindros biturbo, ele entrega 510 cavalos de potência.'
     },
     {
@@ -36,7 +36,7 @@ const produto = [
         marca: 'Audi', 
         categoria: 'Esportivo', 
         preco: 800000, 
-        imagem: '../assets/audiRS6.jpg',
+        imagem: 'assets/audiRS6.jpg',
         descricao: 'Audi RS6 Avant é a união definitiva entre o alto desempenho de um supercarro e a funcionalidade de uma perua familiar. Equipado com um motor 4.0 V8 biturbo e sistema híbrido leve (MHEV).'    
     },
     {
@@ -44,7 +44,7 @@ const produto = [
         marca: 'Porsche', 
         categoria: 'Esportivo', 
         preco: 1000000, 
-        imagem: '../assets/porshe911.jpg',
+        imagem: 'assets/porshe911.jpg',
         descricao: 'O Porsche 911 Carrera S é a personificação do esportivo de alto desempenho. Equipado com um motor boxer 3.0 biturbo de 6 cilindros, ele entrega 450 cv e torque de 54 kgfm'
     }
 ];

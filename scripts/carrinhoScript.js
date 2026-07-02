@@ -6,7 +6,7 @@ const bancoDeCarros = [
         categoria: 'Superesportivo', 
         preco: 3900000, 
         descricao: 'A Ferrari F8 Spider é um conversível de alto desempenho que combina o design aerodinâmico de Maranello com a emoção de dirigir ao ar livre. Equipada com um motor V8 Biturbo de 720 cavalos.',
-        img: '../assets/ferrarif8.jpg' 
+        img: 'assets/ferrarif8.jpg' 
     },
     { 
         nome: 'Aventador SVJ', 
@@ -14,7 +14,7 @@ const bancoDeCarros = [
         categoria: 'Superesportivo', 
         preco: 6900000, 
         descricao: 'A Lamborghini Aventador SVJ é um dos superesportivos mais insanos já fabricados. Equipada com um motor V12 NA, vai de 0 a 100 km/h em 2.8 segundos.',
-        img: '../assets/AventadorSVJ.jpg' 
+        img: 'assets/AventadorSVJ.jpg' 
     },
     { 
         nome: 'Continental GT', 
@@ -22,7 +22,7 @@ const bancoDeCarros = [
         categoria: 'Luxo', 
         preco: 1700000, 
         descricao: 'O Bentley Continental GT é um cupê de luxo de altíssimo desempenho, famoso por seu acabamento artesanal e motorização potente. A jornada mais requintada possível.',
-        img: '../assets/Bentley.jpg' 
+        img: 'assets/Bentley.jpg' 
     },
     { 
         nome: 'M3 Competition', 
@@ -30,7 +30,7 @@ const bancoDeCarros = [
         categoria: 'Esportivo', 
         preco: 800000, 
         descricao: 'A BMW M3 Competition é um sedã voltado para a pista e praticidade familiar. Equipada com um motor 3.0 de 6 cilindros, ela entrega muita adrenalina.',
-        img: '../assets/bmwM3.jpg' 
+        img: 'assets/bmwM3.jpg' 
     },
     { 
         nome: 'RS6 Avant', 
@@ -38,7 +38,7 @@ const bancoDeCarros = [
         categoria: 'Esportivo', 
         preco: 1200000, 
         descricao: 'A perua familiar definitiva e um dos carros mais brutais em aceleração. Uma combinação perfeita de design, espaço e um motor V8 insano.',
-        img: '../assets/audiRS6.jpg' 
+        img: 'assets/audiRS6.jpg' 
     },
     { 
         nome: '911 Carrera S', 
@@ -46,8 +46,9 @@ const bancoDeCarros = [
         categoria: 'Esportivo', 
         preco: 1000000, 
         descricao: 'O ícone atemporal. O 911 Carrera S entrega dirigibilidade pura e tecnologia de ponta, equipado com o clássico motor boxer.',
-        img: '../assets/porshe911.jpg' 
+        img: 'assets/porshe911.jpg' 
     }
+
 ];
 
 // Inicializa o carrinho recuperando dados do localStorage
