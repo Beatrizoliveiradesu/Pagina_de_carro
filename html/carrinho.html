@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Grand Prix - Carrinho de Reservas</title>
+    <link rel="icon" href="../assets/Afavicon.png">
+    <link rel="stylesheet" href="../style/styleCarrinho.css">
+    <script src="../scripts/carrinhoScript.js" defer></script>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="../assets/AfaviconSemFundo.png" alt="Apex Grand Prix Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Catálogo</a>
+            <a href="login.html">Login</a>
+            <a href="carrinho.html" style="color: #d32f2f;">Carrinho</a>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho de Modelos e Filtros -->
+    <div class="top-bar">
+        <h1>Nossos modelos:</h1>
+        <div class="filtro-container">
+            <label for="filtroCategoria">Categoria:</label>
+            <select id="filtroCategoria" onchange="filtrarVitrine()">
+                <option value="Todos">Todos</option>
+                <option value="Superesportivo">Superesportivo</option>
+                <option value="Esportivo">Esportivo</option>
+                <option value="Luxo">Luxo</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Container Principal do Conteúdo -->
+    <div class="container">
+        <!-- Vitrine de Catálogo -->
+        <div class="catalogo">
+            <div class="car-grid" id="grid-carros">
+                <!-- Inserido dinamicamente via JS -->
+            </div>
+        </div>
+
+        <!-- Painel Lateral da Reserva (Carrinho) -->
+        <div class="cart-panel">
+            <h2>SUA RESERVA</h2>
+            <div id="carrinho" style="font-size: 0.85rem; color: #aaa;">
+                O carrinho está vazio.
+            </div>
+            <div class="total">Total: <span id="total">R$ 0,00</span></div>
+            <button class="btn-finalizar" onclick="finalizarPedido()">FINALIZAR RESERVA</button>
+        </div>
+    </div>
+
+</body>
+</html>
