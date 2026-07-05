@@ -64,12 +64,19 @@ function renderizar(Lista) {
     Lista.forEach(p => {
         catalogo.innerHTML += `
             <div class="produto-card">
-                <img src="${p.imagem}" alt="${p.nome}" class="carro-foto">
+                <div class="carro-foto-container">
+                    <img src="${p.imagem}" alt="${p.nome}" class="carro-foto">
+                </div>
                 <h3>${p.nome}</h3>
+                <div class="carro-tags">
+                    <span class="tag-brand">${p.marca}</span>
+                    <span class="tag-category">${p.categoria}</span>
+                </div>
                 <p class="carro-descricao">${p.descricao}</p>
-                <p><strong>Marca:</strong> ${p.marca}</p>
-                <p><strong>Categoria:</strong> ${p.categoria}</p>
-                <p><strong>Preço:</strong> ${formatarMoeda(p.preco)}</p>
+                <div class="carro-preco-container">
+                    <span class="preco-label">Valor da Reserva</span>
+                    <span class="preco-valor">${formatarMoeda(p.preco)}</span>
+                </div>
                 <button class="btn-add" onclick="adicionarAoCarrinhoERedirecionar('${p.nome}', ${p.preco})">Adicionar à Reserva</button>
             </div>
         `;
