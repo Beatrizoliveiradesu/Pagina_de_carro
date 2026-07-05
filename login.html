@@ -21,6 +21,7 @@
                 <img src="assets/AfaviconSemFundo.png" alt="GrandCars Logo">
             </div>
             <h1>Acesse sua Conta</h1>
+            <p class="form-helper">Primeiro acesso? Digite seu usuário e senha. Seus dados serão cadastrados automaticamente no sistema.</p>
             
             <div class="input-group">
                 <label for="login">Login</label>
@@ -34,6 +35,18 @@
             
             <button type="submit" class="btn-submit">Entrar</button>
         </form>
+    </div>
+
+    <!-- Modal Customizado de Feedback -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="modalIcon" class="modal-icon">✅</div>
+                <h2 id="modalTitle">Sucesso!</h2>
+                <p id="modalMessage">Conta criada e login realizado com sucesso.</p>
+                <button class="btn-modal" onclick="confirmarLogin()">Confirmar</button>
+            </div>
+        </div>
     </div>
 
     <script src="scripts/loginScript.js"></script>
