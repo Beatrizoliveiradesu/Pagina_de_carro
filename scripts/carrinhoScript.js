@@ -48,7 +48,6 @@ const bancoDeCarros = [
         descricao: 'O ícone atemporal. O 911 Carrera S entrega dirigibilidade pura e tecnologia de ponta, equipado com o clássico motor boxer.',
         img: 'assets/porshe911.jpg' 
     }
-
 ];
 
 // Inicializa o carrinho recuperando dados do localStorage
@@ -67,7 +66,47 @@ function formatarMoeda(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
-// Função que renderiza a vitrine de carros
+// Funções para controle do Modal Customizado
+function mostrarModal(titulo, mensagem, tipo) {
+    const modal = document.getElementById("customModal");
+    const modalIcon = document.getElementById("modalIcon");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalMessage = document.getElementById("modalMessage");
+
+    if (!modal) return;
+
+    if (tipo === "sucesso") {
+        modalIcon.innerHTML = "✅";
+        modalIcon.style.color = "#4CAF50";
+    } else if (tipo === "aviso") {
+        modalIcon.innerHTML = "⚠️";
+        modalIcon.style.color = "#FFC107";
+    } else {
+        modalIcon.innerHTML = "ℹ️";
+        modalIcon.style.color = "#2196F3";
+    }
+
+    modalTitle.innerText = titulo;
+    modalMessage.innerText = mensagem;
+    modal.style.display = "flex";
+}
+
+function fecharModal() {
+    const modal = document.getElementById("customModal");
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Fecha o modal ao clicar fora dele
+window.onclick = function(event) {
+    const modal = document.getElementById("customModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Função que renderiza a vitrine de carros no carrinho.html (idêntico à Home)
 function renderizarVitrine(lista) {
     const grid = document.getElementById('grid-carros');
     if (!grid) return;
@@ -77,13 +116,20 @@ function renderizarVitrine(lista) {
     lista.forEach(carro => {
         grid.innerHTML += `
             <div class="car-card">
-                <img src="${carro.img}" alt="${carro.nome}" class="car-image">
+                <div class="car-image-container">
+                    <img src="${carro.img}" alt="${carro.nome}" class="car-image">
+                </div>
                 <div class="car-content">
                     <h3 class="car-title">${carro.nome}</h3>
+                    <div class="car-tags">
+                        <span class="tag-brand">${carro.marca}</span>
+                        <span class="tag-category">${carro.categoria}</span>
+                    </div>
                     <p class="car-desc">${carro.descricao}</p>
-                    <div class="car-meta"><strong>Marca:</strong> ${carro.marca}</div>
-                    <div class="car-meta"><strong>Categoria:</strong> ${carro.categoria}</div>
-                    <div class="car-price">Preço: ${formatarMoeda(carro.preco)}</div>
+                    <div class="car-preco-container">
+                        <span class="preco-label">Valor da Reserva</span>
+                        <span class="preco-valor">${formatarMoeda(carro.preco)}</span>
+                    </div>
                     <button class="btn-add" onclick="adicionarAoCarrinho('${carro.nome}', ${carro.preco})">ADICIONAR À RESERVA</button>
                 </div>
             </div>
@@ -177,13 +223,14 @@ function atualizarCarrinho() {
     totalSpan.innerHTML = formatarMoeda(total);
 }
 
-// Finaliza a reserva
+// Finaliza a reserva (usando modal customizado em vez de alert)
 function finalizarPedido() {
     if (carrinho.length === 0) {
-        alert("Sua lista de reserva está vazia!");
+        mostrarModal("Carrinho Vazio", "Sua lista de reservas está vazia. Adicione algum veículo antes de finalizar!", "aviso");
         return;
     }
-    alert("✅ Reserva processada com sucesso!");
+    
+    mostrarModal("Reserva Confirmada", "✅ Sua solicitação de reserva foi processada com sucesso no sistema GrandCars!", "sucesso");
     carrinho = [];
     salvarCarrinho();
 }
