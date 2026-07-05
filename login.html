@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>GrandCars - Login</title>
     <link rel="icon" href="assets/Afavicon.png">
     <link rel="stylesheet" href="style/styleLogin.css">
 </head>
 <body>
-    <form id="formCadastro">
-        <h1>Login</h1>
-        <hr>
-        <label for="login">Login:</label>
-        <input type="text" id="login" required>
-        <p></p>
-        <label for="senha">Senha:</label>
-        <input type="text" id="senha" required>
-        <p></p>
-        <button type="submit">Entrar</button>
-        <script src="scripts/loginScript.js"></script>
-    </form>
+
+    <!-- Botão de Voltar -->
+    <a href="index.html" class="back-link">
+        <span>&larr;</span> Voltar ao Catálogo
+    </a>
+
+    <!-- Container do Formulário de Login -->
+    <div class="login-container">
+        <form id="formCadastro">
+            <div class="brand-logo">
+                <img src="assets/AfaviconSemFundo.png" alt="GrandCars Logo">
+            </div>
+            <h1>Acesse sua Conta</h1>
+            
+            <div class="input-group">
+                <label for="login">Login</label>
+                <input type="text" id="login" placeholder="Digite seu usuário" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+            </div>
+            
+            <button type="submit" class="btn-submit">Entrar</button>
+        </form>
+    </div>
+
+    <script src="scripts/loginScript.js"></script>
 </body>
 </html>
